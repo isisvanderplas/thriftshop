@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :profiles, only: [:new, :edit, :create, :update, :show]
   resources :products
-  
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :shopping_cart, only: [:edit, :create, :update, :destroy, :show]
+
 end
