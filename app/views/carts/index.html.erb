@@ -1,0 +1,10 @@
+<h1> Your list of products </h1>
+<% @products.each do |product| %>
+<p><%=  product.name, product_path(product.id) %></p>
+<p><%=  product.price, product_path(product.id) %></p>
+<% end %>
+
+<p><%=  carts.total_price, cart_path(cart.id) %></p>
+
+
+<%= link_to "Add New Product", new_product_path %> (:user_id => User.find.params[:id])
