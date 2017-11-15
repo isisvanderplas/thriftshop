@@ -15,11 +15,11 @@ luxury = Category.create(name: "Luxury")
 books = Category.create(name: "Books")
 
 # ----- Users -----
-# izzy = User.create( email: "izzy@coda.com", encrypted_password: "123456")
-# henock = User.create( email: "henock@coda.com", encrypted_password: "123456")
-# anna = User.create( email: "anna@coda.com", encrypted_password: "123456")
-# robin = User.create( email: "izzy@coda.com", encrypted_password: "123456")
-# lianne = User.create( email: "izzy@coda.com", encrypted_password: "123456")
+izzy = User.create( email: "izzy@coda.com", encrypted_password: "123456")
+henock = User.create( email: "henock@coda.com", encrypted_password: "123456")
+anna = User.create( email: "anna@coda.com", encrypted_password: "123456")
+robin = User.create( email: "izzy@coda.com", encrypted_password: "123456")
+lianne = User.create( email: "izzy@coda.com", encrypted_password: "123456")
 
 # ----- Products -----
 blue_pen = Product.create( name:"Amazing Blue Pen", price: "5.95", description: "Amazing, luxurious pen!", image: "http://www.montblanc.com/content/dam/mtb/products/writing-instruments/114/810/114810/236159-ecom-osis-sq-04.png.adapt.450.450.png" )
@@ -32,5 +32,5 @@ cool_car = Product.create( name:"Amazing Cool Car", price: "999999.95", descript
 big_boat = Product.create( name:"Amazing Big Boat", price: "777777.95", description: "Amazing, big boat!", image: "http://luxuryyachtconcierge.com/wp-content/uploads/25.jpg" )
 
 
-cart1 = Cart.create!(products:[blue_pen, black_glasses], user: lianne, quantity: 2; price: 5.95, total_price: 10.9)
-cart2 = Cart.create!(products: [cool_phone, cool_car, big_boat], user: anna, quantity: 3; price: 999.95, total_price: 1000000)
+# cart1 = Cart.create!(product:[blue_pen, black_glasses], user: lianne, quantity: 2, price: 5.95, total_price: 10.9)
+# cart2 = Cart.create!(product: [cool_phone, cool_car, big_boat], user: anna, quantity: 3, price: 999.95, total_price: 1000000)
