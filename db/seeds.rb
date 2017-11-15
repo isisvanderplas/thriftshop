@@ -2,11 +2,11 @@ User.destroy_all
 Product.destroy_all
 
 # ----- Users -----
-izzy = User.create( email: "izzy@coda.com", pass: "123456")
-henock = User.create( email: "henock@coda.com", pass: "123456")
-anna = User.create( email: "anna@coda.com", pass: "123456")
-robin = User.create( email: "izzy@coda.com", pass: "123456")
-lianne = User.create( email: "izzy@coda.com", pass: "123456")
+# izzy = User.create( email: "izzy@coda.com", encrypted_password: "123456")
+# henock = User.create( email: "henock@coda.com", encrypted_password: "123456")
+# anna = User.create( email: "anna@coda.com", encrypted_password: "123456")
+# robin = User.create( email: "izzy@coda.com", encrypted_password: "123456")
+# lianne = User.create( email: "izzy@coda.com", encrypted_password: "123456")
 
 # ----- Products -----
 blue_pen = Product.create( name:"Amazing Blue Pen", price: "5.95", description: "Amazing, luxurious pen!", image: "http://www.montblanc.com/content/dam/mtb/products/writing-instruments/114/810/114810/236159-ecom-osis-sq-04.png.adapt.450.450.png" )
