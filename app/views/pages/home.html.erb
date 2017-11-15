@@ -1,16 +1,23 @@
 
-<div class="container" style="background-color: #D0E8E6">
-  <div class="jumbotron jumbotron-fluid">
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-  </div>
-  <div class="jumbotron jumbotron-fluid">
-    <h1>show products here</h1>
-  </div>
-  <div class="jumbotron jumbotron-fluid">
-    <h1>something here?</h1>
-  </div>
-  <div class="jumbotron jumbotron-fluid">
-    <h1>how about here? ;-)</h1>
+<div style="background-color: #D0E8E6">
+  <div class="jumbotron jumbotron-fluid container">
+    <h2>Popular Selections</h2>
+
+      <div class="row">
+        <% @products.each do |product| %>
+        <div class="card col-sm-2" style="height:250; max-width:250">
+          <div class="card-image-top">
+            <%= image_tag product.image, class: "img-thumbnail" %>
+          </div>
+          <div class="card-title text-primary">
+            <%= product.name %>
+          </div>
+          <div class="card-body text-danger">
+            € <%= product.price %>
+          </div>
+        </div>
+        <% end %>
+      </div>
+
   </div>
 </div>
