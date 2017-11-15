@@ -4,7 +4,5 @@ class Profile < ApplicationRecord
   validates :address, presence: true
   validates :phone_number, presence: true
 
-  def name
-    "#{name}"
-  end
+  
 end
