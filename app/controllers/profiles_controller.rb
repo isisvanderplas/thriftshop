@@ -14,25 +14,29 @@ class ProfilesController < ApplicationController
     else
       render :new
     end
-
-    def edit
-    end
-
-    def update
-      if @profile.update(profile_params)
-        redirect_to edit_profile_path(@profile), notice: "Profile successfully updated"
-      else
-        render :edit
-      end
-    end
-
-    private
-      def set_profile
-        @profile = current_user.profile
-      end
-
-      def profile_params
-        params.require(:profile).permit(:name, :address, :phone_number)
-      end
   end
+
+  def show
+    @profile = Profile.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    if @profile.update(profile_params)
+      redirect_to edit_profile_path(@profile), notice: "Profile successfully updated"
+    else
+      render :edit
+    end
+  end
+
+  private
+    def set_profile
+      @profile = current_user.profile
+    end
+
+    def profile_params
+      params.require(:profile).permit(:name, :address, :phone_number)
+    end
 end
