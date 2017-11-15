@@ -4,6 +4,6 @@ class Product < ApplicationRecord
   has_many :customers, through: :carts, source: :user
   has_and_belongs_to_many :categories
 
-  validate :name, presence: true
+  validates :name, presence: true
 
 end
