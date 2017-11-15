@@ -32,5 +32,5 @@ cool_car = Product.create( name:"Amazing Cool Car", price: "999999.95", descript
 big_boat = Product.create( name:"Amazing Big Boat", price: "777777.95", description: "Amazing, big boat!", image: "http://luxuryyachtconcierge.com/wp-content/uploads/25.jpg" )
 
 
-cart1 = Cart.create!(products:[blue_pen, black_glasses], user: lianne, quantity: 2, price: 5.95, total_price: 10.9)
-cart2 = Cart.create!(products: [cool_phone, cool_car, big_boat], user: anna, quantity: 3, price: 999.95, total_price: 1000000)
+# cart1 = Cart.create!(product:[blue_pen, black_glasses], user: lianne, quantity: 2, price: 5.95, total_price: 10.9)
+# cart2 = Cart.create!(product: [cool_phone, cool_car, big_boat], user: anna, quantity: 3, price: 999.95, total_price: 1000000)
