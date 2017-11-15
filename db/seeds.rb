@@ -1,5 +1,6 @@
 User.destroy_all
 Product.destroy_all
+Cart.destroy_all
 
 # ----- Users -----
 # izzy = User.create( email: "izzy@coda.com", encrypted_password: "123456")
@@ -17,3 +18,15 @@ red_bag = Product.create( name:"Amazing Red Bag", price: "399.95", description: 
 green_shoes = Product.create( name:"Amazing Green Shoes", price: "79.95", description: "Amazing, luxurious shoes!", image: "https://brightledshoes.com/wp-content/uploads/2016/07/green-yeezy-led-shoes-1.jpg" )
 cool_car = Product.create( name:"Amazing Cool Car", price: "999999.95", description: "Amazing, luxurious car!", image: "http://www.fubiz.net/wp-content/uploads/2010/11/mercedes-released-biome-concept-photos-medium_1.jpg" )
 big_boat = Product.create( name:"Amazing Big Boat", price: "777777.95", description: "Amazing, big boat!", image: "http://luxuryyachtconcierge.com/wp-content/uploads/25.jpg" )
+
+
+
+
+
+
+
+
+
+
+cart1 = Cart.create!(products:[blue_pen, black_glasses], user: lianne, quantity: 2; price: 5.95, total_price: 10.9)
+cart2 = Cart.create!(products: [cool_phone, cool_car, big_boat], user: anna, quantity: 3; price: 999.95, total_price: 1000000)
