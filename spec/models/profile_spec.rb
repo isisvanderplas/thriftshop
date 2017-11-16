@@ -28,11 +28,12 @@ RSpec.describe Profile, type: :model do
   end
 
   describe "association with user" do
-    let(:user) {create :user}
-    it "belongs to a user" do
-      profile = user.profile.build(name: "Name")
 
-      expect(profile.user).to eq(user)
+    it "deleted when user is destroyed" do
+      user = User.new
+      profile = Profile.new(user: user)
+      user.destroy
+      expect(profile.id).to eq(nil)
     end
   end
 end
