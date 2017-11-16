@@ -4,8 +4,9 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :profiles, only: [:new, :edit, :create, :update, :show]
-  resources :products
-
   resources :shopping_cart, only: [:edit, :create, :update, :destroy, :show]
 
+  namespace :api do
+    resources :products
+  end
 end
