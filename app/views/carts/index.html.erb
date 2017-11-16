@@ -1,0 +1,10 @@
+<h1>Cart Display</h1>
+  <% @carts.each do |cart| %>
+
+  <p>User: <%= @cart.user %>
+  <p>Product: <%= @cart.product %>
+  <p>Quatity: <%= @cart.quantity %></p>
+  <p>Price: <%= @cart.price %></p>
+  <p>Total Price: <%= @cart.total_price %></p>
+
+<% end%>
