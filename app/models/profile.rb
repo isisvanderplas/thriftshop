@@ -3,6 +3,6 @@ class Profile < ApplicationRecord
 
   validates :name, presence: true
   validates :address, presence: true
-  validates :phone_number, presence: true
-  
+  validates :phone_number, presence: true, numericality: { only_integer: true }
+
 end
