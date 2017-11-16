@@ -25,7 +25,14 @@ RSpec.describe Profile, type: :model do
       profile.valid?
       expect(profile.errors).to have_key(:phone_number)
     end
+  end
 
+  describe "association with user" do
+    let(:user) {create :user}
+    it "belongs to a user" do
+      profile = user.profile.build(name: "Name")
 
+      expect(profile.user).to eq(user)
+    end
   end
 end
