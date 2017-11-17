@@ -3,5 +3,8 @@
 <% @products.each do |product| %>
 <% if product.category === @category.name %>
     <p><%= product.name %></p>
+    <% else %>
+    <p><%= "Sorry, no amazing products here! :(" %></p>
+    <% break %>
 <% end %>
 <% end %>
