@@ -1,4 +1,4 @@
-function displayTotalAmount(){
+function displayCart(){
   $("div#onceHidden").toggle();
 }
 

@@ -1,4 +1,3 @@
-
 <div class="jumbotron">
   <h1><%= @product.name %></h1>
 
@@ -16,29 +15,13 @@
       <th>Price: € </th>
       <td><%= @product.price %></td>
     </tr>
-    <h5>Categories:</h5>
-    <% @categories.each do |category| %>
-    <p><%= category.name %></p>
-    <% end %>
+
   </table>
 
 </div>
 
-<button onclick="displayTotalAmount()" type="button" class="btn btn-primary btn-lg">Add to cart bitch!</button>
-
+<button onclick="displayCart()" type="button" class="btn btn-primary btn-lg">Add to cart</button>
 
 <div style="display: none;" id="onceHidden">
-
-  <h1>We thought this is were customers can pick the amount of products</h1>
-
+  <%= render "cartform" %>
 </div>
-
-<select id="product">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-  <option>6</option>
-</select>
-
