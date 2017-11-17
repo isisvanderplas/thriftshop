@@ -5,4 +5,10 @@ class PagesController < ApplicationController
 
   def terms
   end
+
+  def about
+  end
+
+  def team
+  end
 end
