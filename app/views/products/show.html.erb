@@ -16,7 +16,10 @@
       <th>Price: € </th>
       <td><%= @product.price %></td>
     </tr>
-
+    <h5>Categories:</h5>
+    <% @categories.each do |category| %>
+    <p><%= category.name %></p>
+    <% end %>
   </table>
 
 </div>
@@ -29,4 +32,3 @@
   <h1>We thought this is were customers can pick the amount of products</h1>
 
 </div>
-

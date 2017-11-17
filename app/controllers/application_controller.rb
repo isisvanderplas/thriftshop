@@ -9,10 +9,10 @@ class ApplicationController < ActionController::Base
   private
 
   def get_categories
-    @categories = Category.all
+    @allCategories = Category.all
   end
 
   def get_products
-    @products = Product.all
+    @allProducts = Product.all
   end
 end
