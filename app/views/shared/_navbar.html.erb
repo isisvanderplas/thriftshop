@@ -18,6 +18,18 @@
               <span class="glyphicon glyphicon-search"></span>
           </button>
       </form>
+      <div class="btn-group">
+        <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Categories <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <% @categories.each do |category| %>
+          <li><%= link_to category.name, category_path(category.id) %></li>
+          <% end %>
+          <li role="separator" class="divider"></li>
+          <li><%= link_to 'All Categories', categories_path %></li>
+        </ul>
+      </div>
       <ul class="nav navbar-nav navbar-right">
 
         <% if !user_signed_in? %>
