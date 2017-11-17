@@ -1,34 +1,27 @@
-
 <div class="jumbotron">
-  <h1><%= @product.name %></h1>
+  <div class="container" style="text-align: center; item-align: center">
+    <h2><%= @product.name %></h2>
 
-  <table "Product detail view">
-    <tr>
-      <th> Description:  </th>
-      <td><%= %></td>
-      <td><%= @product.description %></td>
-    </tr>
-    <tr>
-      <th></th>
-      <td><%= image_tag @product.image %></td>
-    </tr>
-    <tr>
-      <th>Price: € </th>
-      <td><%= @product.price %></td>
-    </tr>
-    <h5>Categories:</h5>
-    <% @categories.each do |category| %>
-    <p><%= category.name %></p>
-    <% end %>
-  </table>
+    <table "Product detail view">
+      <tr>
+        <th></th>
+        <td><%= image_tag(@product.image, width: "80%") %></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td><%= @product.description %></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>€ <%= @product.price %></td>
+      </tr>
 
+    </table>
+
+  </div>
 </div>
-
-<button onclick="displayTotalAmount()" type="button" class="btn btn-primary btn-lg">Add to cart bitch!</button>
-
+<button onclick="displayCart()" type="button" class="btn btn-primary btn-lg">Add to cart</button>
 
 <div style="display: none;" id="onceHidden">
-
-  <h1>We thought this is were customers can pick the amount of products</h1>
-
+  <%= render "cartform" %>
 </div>
