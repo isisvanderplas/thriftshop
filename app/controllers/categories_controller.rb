@@ -9,6 +9,8 @@ class CategoriesController < ApplicationController
     @products = @category.products
   end
 
+  private
+
   def category_params
     params.require(:category).permit(product_ids: [])
   end

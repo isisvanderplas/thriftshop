@@ -5,14 +5,13 @@ class ApplicationController < ActionController::Base
   before_action :get_products
 
 
-
   private
 
   def get_categories
-    @allCategories = Category.all
+    @categories = Category.all
   end
 
   def get_products
-    @allProducts = Product.all
+    @products = Product.all
   end
 end
