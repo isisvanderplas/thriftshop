@@ -6,6 +6,10 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    @product = @category.product
+    @products = @category.products
+  end
+
+  def category_params
+    params.require(:category).permit(product_ids: [])
   end
 end

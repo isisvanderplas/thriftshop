@@ -1,7 +1,7 @@
 <h1><%= @category.name %></h1>
 
 <% @products.each do |product| %>
-<% if product.category === @category.name %>
+<% if product.category == @category %>
     <p><%= product.name %></p>
     <% else %>
     <p><%= "Sorry, no amazing products here! :(" %></p>
