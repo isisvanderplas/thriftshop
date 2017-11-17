@@ -1,6 +1,6 @@
 <h2>Your Cart</h2>
 
-<p>Product name: </p>
+<p>Product name: <%= @product.name %> </p>
 
 <p>Quantity:
   <select id="product">
@@ -12,4 +12,4 @@
   <option>6</option>
 </select></p>
 
-<p>Total Price: </p>
+<p>Total Price: € <%= @product.price %></p>
