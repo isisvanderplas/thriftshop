@@ -1,10 +1,6 @@
 <h1><%= @category.name %></h1>
 
 <% @products.each do |product| %>
-<% if product.category == @category %>
     <p><%= product.name %></p>
-    <% else %>
-    <p><%= "Sorry, no amazing products here! !!!!:(" %></p>
-    <% break %>
-<% end %>
+    <%= link_to (image_tag product.image), product_path(product.id) %>
 <% end %>
