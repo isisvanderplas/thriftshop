@@ -10,7 +10,8 @@
     </tr>
     <tr>
       <th></th>
-      <td><%= image_tag @product.image %></td>
+      <%= (image_tag @product.image, class: "img-thumbnail") %>
+
     </tr>
     <tr>
       <th>Price: € </th>
@@ -29,4 +30,3 @@
   <h1>We thought this is were customers can pick the amount of products</h1>
 
 </div>
-
