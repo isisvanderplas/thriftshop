@@ -1,11 +1,25 @@
+
 <div class="jumbotron">
   <h1><%= @product.name %></h1>
 
-  <p>Price: € <%= @product.price %>
-  <p>Description: <%= @product.description %></p>
-  <p><%= image_tag @product.image %></p>
-</div>
+  <table "Product detail view">
+    <tr>
+      <th> Description:  </th>
+      <td><%= %></td>
+      <td><%= @product.description %></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td><%= image_tag @product.image %></td>
+    </tr>
+    <tr>
+      <th>Price: € </th>
+      <td><%= @product.price %></td>
+    </tr>
 
+  </table>
+
+</div>
 
 <button onclick="displayTotalAmount()" type="button" class="btn btn-primary btn-lg">Add to cart bitch!</button>
 
@@ -15,3 +29,4 @@
   <h1>We thought this is were customers can pick the amount of products</h1>
 
 </div>
+
